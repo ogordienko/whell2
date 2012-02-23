@@ -1,5 +1,5 @@
 name "n-api"
-description "n-api"
-run_list(
-  "recipe[stack:]"
-)
+description "nova-api"
+run_list  "recipe[wheel::stack]"
+default_attributes "stack" => { "enabled_services" => [ "n-api"] }
+
