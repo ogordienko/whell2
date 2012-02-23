@@ -1,0 +1,19 @@
+SERVICE_TOKEN=nova
+ADMIN_PASSWORD=nova
+GUEST_PASSWORD=nova
+ENABLED_SERVICES=<%= @ENABLED_SERVICES %>
+ROOTSLEEP=3
+PUBLIC_INTERFACE=eth0
+NET_MAN=FlatManager
+MULTI_HOST=False
+MYSQL_HOST=<%= @MYSQL_HOST %>
+MYSQL_USER=<%= @MYSQL_USER %>
+MYSQL_PASSWORD=<%= @MYSQL_PASSWORD %>
+RABBIT_HOST=<%= @RABBIT_HOST %>
+RABBIT_PASSWORD=<%= @RABBIT_PASSWORD %>
+LIBVIRT_TYPE=<%= @LIBVIRT_TYPE %>
+<% @REPOS.each do |key, value| -%>
+<%= key %>_REPO="<%= value %>"
+<%= key %>_BRANCH="<%= @BRANCH %>"
+<% end -%>
+LOGFILE='/opt/stack/devstack.log'

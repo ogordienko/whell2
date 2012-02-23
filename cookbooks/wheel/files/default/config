@@ -1,0 +1,8 @@
+StrictHostKeyChecking no
+
+Host github.com
+    IdentityFile ~/.ssh/id_rsa
+    GSSAPIAuthentication no
+    PubkeyAuthentication yes
+    PasswordAuthentication no
+
